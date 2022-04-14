@@ -9,12 +9,14 @@ const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
   url: 'https://teamate92.github.io',
-  baseUrl: '/my-website2/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'teamate92', // Usually your GitHub org/user name.
+  projectName: 'teamate92.github.io', // Usually your repo name.
+  trailingSlash: false,
+  deploymentBranch:'gh-pages',
 
   presets: [
     [
