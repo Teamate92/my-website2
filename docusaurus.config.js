@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'teamate92', // Usually your GitHub org/user name.
-  projectName: 'teamate92.github.io', // Usually your repo name.
+  projectName: 'my-website2', // Usually your repo name.
   trailingSlash: false,
   deploymentBranch:'gh-pages',
 
