@@ -6,17 +6,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://teamate92.github.io',
-  baseUrl: '/my-website2/',
+  title: 'Connectivity Device Managment',
+  tagline: 'Schneider Electric',
+  url: 'https://pages.github.schneider-electric.com',
+  baseUrl: '/IoT/cdm-user-documentation/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'teamate92', // Usually your GitHub org/user name.
-  projectName: 'my-website2', // Usually your repo name.
+  organizationName: 'IoT', // Usually your GitHub org/user name.
+  projectName: 'cdm-user-documentation', // Usually your repo name.
   trailingSlash: false,
-  deploymentBranch:'gh-pages',
+  deploymentBranch: 'gh-pages',
+  githubHost:'github.schneider-electric.com',
 
   presets: [
     [
@@ -26,13 +27,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.schneider-electric.com/IoT/cdm-user-documentation/blob/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -45,70 +40,93 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+              type:'doc',
+              docId:'generic-infos/what-is-etp',
+              position: 'left',
+              label: 'Generic Infos',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'doc',
+            docId: 'use-cases/device-prerequisite',
+            position: 'left',
+            label: 'Use cases',
+          },
+          {
+            type: 'doc',
+            docId: 'cloud-prerequisite/open-a-tenant',
+            position: 'left',
+            label: 'Cloud Prerequisite',
+          },
+          {
+            type: 'doc',
+            docId: 'sensors/introduction',
+            position: 'left',
+            label: 'Sensors',
+          },
+          {
+            type: 'doc',
+            docId: 'constraint-devices/introduction',
+            position: 'left',
+            label: 'Constraint Devices',
+          },
+          {
+            type: 'doc',
+            docId: 'iot-devices/introduction',
+            position: 'left',
+            label: 'IoT Devices',
+          },
+          {
+            type: 'doc',
+            docId: 'small-gateway/introduction',
+            position: 'left',
+            label: '"Small Gateway"',
+          },
+          {
+            type: 'doc',
+            docId: 'big-gateway/introduction',
+            position: 'left',
+            label: '"Big Gateway"',
+          },
+          //Right
+          {
+            type: 'docsVersionDropdown',
             position: 'right',
+          },
+          {
+            href: 'https://github.schneider-electric.com/IoT/cdm-user-documentation',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
       footer: {
         style: 'dark',
         links: [
+          
           {
-            title: 'Docs',
+            //title: 'More',
             items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
+              /*{
                 label: 'Blog',
                 to: '/blog',
               },
+              */
               {
+                href: 'https://github.schneider-electric.com/IoT/cdm-user-documentation',
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Schneider Electric, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
